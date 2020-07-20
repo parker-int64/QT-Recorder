@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>695</width>
+    <height>530</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255,255,255);
+border: 3px solid #e7e7e7;
+
+</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>300</y>
+     <width>271</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="1">
+     <widget class="QCheckBox" name="checkBox">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox{
+    spacing: 5px;
+    font-size: 15px;
+	font: 10pt &quot;Microsoft YaHei UI&quot;;
+	color: rgb(150,148,141);
+	background-color: rgb(255,92,124);
+	border:0px;
+}
+/*checkbox样式设置*/
+QCheckBox::indicator { 
+    width: 26px;
+    height: 50px;
+}
+/*未选中*/
+QCheckBox::indicator::unchecked {   
+	image: url(:/UI组件/uiComponents/unchecked.png);
+}
+/*选中*/
+QCheckBox::indicator::checked { 
+	image: url(:/UI组件/uiComponents/checked.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="takePhotosButton">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+	font: 12pt &quot;Microsoft YaHei UI&quot;;
+	border-radius:0px;
+	background-color: #9F5F9F; 
+    color: black; 
+    border: none;
+} 
+QPushButton:hover { 
+	/*background-color: rgb(139,126,68); */
+	background-color:#871F78;
+    color: white;
+	
+}
+
+QPushButton:pressed {  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:3px;  
+    padding-top:3px;  
+}  
+QPushButton:disabled {
+	border: 2px solid #f44336;
+	 background-color: #f44336;
+     color: white;
+	 opacity: 0.9;
+}</string>
+      </property>
+      <property name="text">
+       <string>抓    拍</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;
+background-color: rgb(255,92,124);
+border:0px</string>
+      </property>
+      <property name="text">
+       <string>显示时间</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_5">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;
+background-color: rgb(255,92,124);
+border:0px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="endRecordBtn">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+	font: 12pt &quot;Microsoft YaHei UI&quot;;
+	border-radius: 3px;
+	background-color: #e0e094; 
+    color: black; 
+    border: none;
+} 
+QPushButton:hover { 
+	/*background-color: rgb(139,126,68); */
+	background-color: rgb(251,114,153);
+    color: white;
+	
+}
+
+QPushButton:pressed {  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:3px;  
+    padding-top:3px;  
+}  
+QPushButton:disabled {
+	border: 2px solid #f44336;
+	 background-color: #f44336;
+     color: white;
+	 opacity: 0.9;
+}</string>
+      </property>
+      <property name="text">
+       <string>结束录制</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="recordButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+	font: 12pt &quot;Microsoft YaHei UI&quot;;
+	border-radius:0px;
+	background-color: #4CAF50;; 
+    color: black; 
+    border: none;
+} 
+QPushButton:hover { 
+	/*background-color: rgb(139,126,68); */
+	background-color: #3e8e41;
+    color: white;
+	
+}
+
+QPushButton:pressed {  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:3px;  
+    padding-top:3px;  
+}  
+QPushButton:disabled {
+	border: 2px solid #f44336;
+	 background-color: #f44336;
+     color: white;
+	 opacity: 0.9;
+}</string>
+      </property>
+      <property name="text">
+       <string>开始录制</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="exitButton">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+	font: 12pt &quot;Microsoft YaHei UI&quot;;
+	border-radius: 0px;
+	background-color: #f44336; 
+    color: black; 
+    border: none;
+} 
+QPushButton:hover { 
+	/*background-color: rgb(139,126,68); */
+	background-color: rgb(255,0,0);
+    color: white;
+	
+}
+
+QPushButton:pressed {  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:3px;  
+    padding-top:3px;  
+}  
+QPushButton:disabled {
+	border: 2px solid #f44336;
+	 background-color: #f44336;
+     color: white;
+	 opacity: 0.9;
+}</string>
+      </property>
+      <property name="text">
+       <string>退出捕捉</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="replayButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+	font: 12pt &quot;Microsoft YaHei UI&quot;;
+	border-radius: 0px;
+	background-color: #008CBA; 
+    color:black; 
+    border: none;
+} 
+QPushButton:hover { 
+	/*background-color: rgb(139,126,68); */
+	background-color:#8F8FBD;
+    color: white;
+	
+}
+
+QPushButton:pressed {  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:3px;  
+    padding-top:3px;  
+}  
+QPushButton:disabled {
+	border: 2px solid #f44336;
+	 background-color: #f44336;
+     color: white;
+	 opacity: 0.9;
+}</string>
+      </property>
+      <property name="text">
+       <string>回    放</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="startCaptureButton">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+	font: 12pt &quot;Microsoft YaHei UI&quot;;
+	border-radius:0px;
+	background-color:#e7e7e7; 
+    color: black; 
+    border: none;
+} 
+QPushButton:hover { 
+	/*background-color: rgb(139,126,68); */
+	background-color:#555555;
+    color: white;
+	
+}
+
+QPushButton:pressed {  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:3px;  
+    padding-top:3px;  
+}  
+QPushButton:disabled {
+	border: 2px solid #f44336;
+	 background-color: #f44336;
+     color: white;
+	 opacity: 0.9;
+}</string>
+      </property>
+      <property name="text">
+       <string>开始捕捉</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>49</y>
+     <width>321</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="maximumSize">
+       <size>
+        <width>320</width>
+        <height>240</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>50</y>
+     <width>311</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid #555555;
+
+font: 12pt &quot;Consolas&quot;;</string>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalWidget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>300</y>
+     <width>261</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid #555555;
+image: url(:/UI组件/uiComponents/bilibili.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Microsoft YaHei UI&quot;;
+border:0px</string>
+      </property>
+      <property name="text">
+       <string>求三连关注，转发！</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>500</y>
+     <width>701</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(196,183,215);
+border:none</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>701</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label_7">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(196,183,215);
+border:0px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="menuSmallButton">
+      <property name="maximumSize">
+       <size>
+        <width>50</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+    border:0px solid;
+	background-color:rgb(196,183,215);
+	image: url(:/UI组件/uiComponents/small.png);
+} 
+QPushButton:hover { 
+	image: url(:/UI组件/uiComponents/small_hover.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="menuExitButton">
+      <property name="maximumSize">
+       <size>
+        <width>55</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+    border:0px solid;
+	background-color:rgb(196,183,215);
+	background-image: url(:/UI组件/uiComponents/close.png);
+} 
+QPushButton:hover { 
+	
+	background-image: url(:/UI组件/uiComponents/close_hover.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalWidget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>430</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>81</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+    border:0px solid;
+	background-color:rgb(196,183,215);
+	background-image: url(:/UI组件/uiComponents/praise.png);
+border:0px;
+} 
+QPushButton:hover { 
+	background-image: url(:/UI组件/uiComponents/praise_hover.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>81</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+    border:0px solid;
+	background-color:rgb(196,183,215);
+	background-image: url(:/UI组件/uiComponents/coins.png);
+border:0px;
+} 
+QPushButton:hover { 
+	background-image: url(:/UI组件/uiComponents/coins_hover.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>81</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { 
+    border:0px solid;
+	background-color:rgb(196,183,215);
+	background-image: url(:/UI组件/uiComponents/collect.png);
+	border:0px;
+} 
+QPushButton:hover { 
+	
+	background-image: url(:/UI组件/uiComponents/collect_hover.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

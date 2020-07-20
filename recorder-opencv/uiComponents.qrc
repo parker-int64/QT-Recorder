@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="UI组件">
+    <file>uiComponents/collect_hover.png</file>
+    <file>uiComponents/coins_hover.png</file>
+    <file>uiComponents/coins.png</file>
+    <file>uiComponents/collect.png</file>
+    <file>uiComponents/collect_hover.png</file>
+    <file>uiComponents/praise.png</file>
+    <file>uiComponents/praise_hover.png</file>
+    <file>uiComponents/close.png</file>
+    <file>uiComponents/close_hover.png</file>
+    <file>uiComponents/small.png</file>
+    <file>uiComponents/small_hover.png</file>
+    <file>uiComponents/bar.png</file>
+    <file>uiComponents/2233Final.png</file>
+    <file>uiComponents/bilibili.jpg</file>
+    <file>uiComponents/checked.png</file>
+    <file>uiComponents/unchecked.png</file>
+  </qresource>
+</RCC>
